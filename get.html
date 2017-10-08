@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amo_lnk博客</title>
+    <link href="./get_files/99651630291615339947.png" rel="shortcut icon" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="./get_files/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./get_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./get_files/main.css">
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-1'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-1'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        focus: 'focus',
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        focus: 'onfocus',
+        load: 'onload'
+    };
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-1');
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                var f = forms[0], textarea = f.getElementsByTagName('textarea')[0], added = false;
+
+                if (null != textarea && 'text' == textarea.name) {
+                    textarea[event.add](event.focus, function () {
+                        if (!added) {
+                            var input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = '_';
+                            input.value = (function () {
+    var _eBv9dch = '22b'//'SgQ'
++'7ee'//'0'
++//'poZ'
+'4'+//'tl'
+'a73'+'8f'//'8p'
++'5'//'z2'
++//'nEG'
+'6'+//'wT'
+'e'+'hb4'//'hb4'
++''///*'c'*/'c'
++//'0'
+'0'+//'q'
+'1'+'hL'//'hL'
++/* 'oh'//'oh' */''+'ht'//'ht'
++'24'//'o'
++'cF'//'cF'
++//'5Z'
+'d51'+/* '3I'//'3I' */''+'847'//'09b'
++''///*'EC'*/'EC'
++'a1'//'T'
++//'l'
+'l'+'f0'//'YE'
++//'a4'
+'4'+//'FVS'
+'574', _fsbqUb = [[15,18],[15,16],[16,18],[16,18],[18,20],[26,27]];
+    
+    for (var i = 0; i < _fsbqUb.length; i ++) {
+        _eBv9dch = _eBv9dch.substring(0, _fsbqUb[i][0]) + _eBv9dch.substring(_fsbqUb[i][1]);
+    }
+
+    return _eBv9dch;
+})();
+
+                            f.appendChild(input);
+                            added = true;
+                        }
+                    });
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<header id="l-header" class="l-header" style="background-image:url('./get_files/bg.jpg')">
+    <div class="hdbg"></div>
+    <div class="hdbg2"></div>
+    <div class="m-about">
+        <div id="logo">
+            <a href="#"><img src="./get_files/99651630291615339947.png" alt=""></a>
+        </div>
+        <h1 class="tit"><a href="#">Amo_lnk博客</a></h1>
+        <div class="about">日常笔记，记录生活的点点滴滴</div>
+    </div>
+    <div id="header-canvas" style="width: 100%;height: 100%"><canvas class="particles-js-canvas-el" width="1512" height="375" style="width: 100%; height: 100%;"></canvas></div>
+</header>
+<div id="m-nav" class="m-nav">
+    <div class="m-nav-all">
+        <div class="m-logo-url">
+            <img src="./get_files/99651630291615339947.png">
+            <h3>Amo_lnk</h3>
+        </div>
+                <ul class="nav">
+            <li>
+                <a href="#">首页</a>
+            </li>
+                            <li>
+                    <a href="#" title="意见反馈">意见反馈</a>
+                </li>
+                    </ul>
+    </div>
+</div>
+<form role="search" method="get" id="search-form" action="#">
+    <div class="search-form">
+        <span id="search-form-close">×</span>
+        <input placeholder="Search for" name="s" id="search-input-s" type="text">
+        <input class="webFont" id="searchsubmit" value="L" type="submit">
+    </div>
+</form>
+<div id="m-header" class="m-header">
+    <div id="showLeftPush" class="left m-header-button"><i class="glyphicon glyphicon-th-list"></i></div>
+    <h1><a href="#">Amo_lnk博客</a></h1>
+    <div id="search-trigger" style="font-size: 18px;" class="right m-header-search"></div>
+</div><div id="m-container" class="container">
+    <div class="col-md-8">
+        <div id="article-list">
+            <article class="post-article clearfix">
+                <div>
+                    <h2 class="title"><a href="#">说旅游项目开发资料</a></h2>
+                    <p class="post-big-info">
+                        <span class="label label-green"><a href="#" rel="author">Amo_lnk</a></span>
+                        <span class="label label-green"><a href="#">默认分类</a></span>
+                        <span class="label label-green"> 2017-10-05</span>
+                    </p>
+                </div>
+                <div class="article-content clearfix" style="margin-bottom: 50px">
+                    <img src="./img/img.png" alt="">
+                    <div class="container-fluid" style="margin: 0px 80px">
+                        <a href="./data/img.zip" class="btn btn-success  btn-block" style="color: white; ">点击获取项目素材文件</a>
+                        <a href="./data/say_travel.zip" class="btn btn-success  btn-block" style="color: white;">点击获取项目源码</a>
+                        <a href="index.html" class="btn btn-success  btn-block" style="color: white;">在线浏览</a>
+                    </div>
+                </div>
+                <div class="article-copyright">
+                        <div class="article-license">
+                            <img height="24" src="./get_files/creativecommons-cc.png" class="mb5"><br>
+                            <div class="license-item text-muted">
+                                本文由 <a href="#">shawne</a> 创作，采用 <a class="alert-link" target="_blank" href="http://creativecommons.org/licenses/by/3.0/cn">知识共享署名 3.0</a>，可自由转载、引用，但需署名作者且注明文章出处。
+                            </div>
+                        </div>
+                </div>
+        </article>
+        </div>
+            <div class="block">
+            <ul class="post-near">
+                <li>上一篇: 没有了</li>
+                <li>下一篇: 没有了</li>
+            </ul>
+        </div>
+            
+
+<div id="comments">
+    <div class="comments-block">
+        <p class="ui  ribbon label comments">只有地板了</p>
+        <ol class="comment-list"><li itemscope="" itemtype="#" id="comment-1" class="comment-li comment-parent comment-odd">
+
+    <div class="comment-author" itemprop="creator" itemscope="" itemtype="#">
+        <span itemprop="image"><img class="avatar" src="./get_files/saved_resource" width="32" height="32"></span>
+
+    </div>
+    <div class="comment-body">
+        <cite class="fn" itemprop="name"><a href="#" rel="external nofollow">Amo_lnk</a></cite>
+        <div class="comment-content" itemprop="commentText">
+            <p>欢迎来到 Amo_lnk - 博客</p>        </div>
+        <div class="comment-footer">
+            <time itemprop="commentTime" datetime="2017-10-05T19:00:41+08:00">October 5th, 2017 at 07:00 pm</time>
+            <a href="#" rel="nofollow" onclick="return TypechoComment.reply(&#39;comment-1&#39;, 1);">回复</a>        </div>
+    </div>
+        
+    
+</li>
+</ol>
+            </div>
+    <div class="comments-block new-comment" id="respond-post-1">
+        <div>
+            <a id="cancel-comment-reply-link" href="#" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+        <p class="ui ribbon label ">添加新评论</p>
+        <form method="post" action="#" class="ui fluid form">
+                            <div class="comments-field">登录身份：<a href="#">Amo_lnk</a>. <a href="#" title="Logout">退出 »</a></div>
+            
+            <div class="comments-field">
+                <textarea rows="8" cols="50" id="comment-content" placeholder="回复内容 (必填)" name="text"></textarea>
+            </div>
+            <button type="submit" id="comment-submit" class="btn btn-success">提交评论</button>
+        </form>
+    </div>
+</div>
+
+
+    </div>
+    <div class="col-md-4">
+        <aside id="sidebar">
+    <aside>
+        <form method="get" id="searchform" class="form-inline clearfix" action="#">
+            <input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text">
+            <button class="btn btn-green btn-small"> 查找</button>
+        </form>
+    </aside>
+    <aside>
+        <div class="panel widget-sets hidden-xs">
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#" data-toggle="tab">最新文章</a></li>
+                <li class=""><a href="#" data-toggle="tab">最新评论</a></li>
+                <li class=""><a href="#" data-toggle="tab">随机文章</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane nav bs-sidenav fade active in" id="sidebar-new">
+                    <ul class="list-group">
+                        <li class="list-group-item clearfix"><a href="#">欢迎使用 Amo_lnk</a></li>                    </ul>
+                </div>
+                <div class="tab-pane fade" id="sidebar-comment">
+                                            <li class="list-group-item clearfix">Amo_lnk：<a href="#" target="_blank">欢迎来到 Amo_lnk博客</a></li>
+                                            
+                </div>
+                <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
+                    <ul class="list-group"><li class="list-group-item clearfix"><a href="#">欢迎来到 Amo_lnk</a></li></ul>                </div>
+            </div>
+        </div>
+    </aside>
+            <div id="fixed"></div>
+    <aside class="fixsidebar" style="top: 1px; width: 337px;">
+        <div class="panel panel-green hidden-xs">
+            <div class="panel-heading">标签云</div>
+            <div id="meta-cloud">
+        </div>
+    </aside>
+
+</aside>    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="back-to-top" class="red" title="返回顶部" data-scroll="body" style="display: none;">
+    <svg id="point-up" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+        <path d="M23.588 17.637c-0.359-0.643-0.34-1.056-2.507-3.057 0.012-7.232-4.851-12.247-5.152-12.55 0-0.010 0-0.015 0-0.015s-0.003 0.003-0.007 0.007l-0.007-0.007c0 0 0 0.005 0 0.015-0.299 0.305-5.141 5.342-5.097 12.575-2.158 2.010-2.138 2.423-2.493 3.068-0.65 1.178-0.481 5.888 0.132 6.957 0.613 1.069 1.629 0.293 1.977-0.004 0.348-0.298 1.885-2.264 2.263-2.176 0 0 0.465-0.090 0.989 0.414 0.518 0.498 1.462 0.966 2.27 1.033 0 0.001 0 0.002-0 0.003 0.005-0.001 0.010-0.001 0.015-0.002 0.005 0 0.010 0.001 0.015 0.001 0-0.001-0-0.002 0-0.003 0.808-0.070 1.749-0.543 2.265-1.043 0.522-0.507 0.988-0.419 0.988-0.419 0.378-0.090 1.923 1.869 2.272 2.165 0.35 0.296 1.369 1.067 1.977-0.005 0.608-1.072 0.756-5.783 0.101-6.958v0 0zM15.95 14.86c-1.349 0.003-2.445-1.112-2.448-2.492-0.003-1.38 1.088-2.5 2.437-2.503 1.349-0.003 2.445 1.112 2.448 2.492 0.003 1.379-1.088 2.5-2.437 2.503v0 0zM17.76 24.876c-0.615 0.474-1.236 0.633-1.801 0.626-0.566 0.009-1.187-0.147-1.804-0.617-0.553-0.403-1.047-0.348-1.308 0.003-0.261 0.351-0.169 2.481 0.152 2.939 0.321 0.458 0.697-0.298 1.249-0.327 0.552-0.028 1.011 1.103 1.221 1.75 0.107 0.331 0.274 0.633 0.5 0.654 0.226-0.023 0.392-0.326 0.497-0.657 0.207-0.648 0.661-1.781 1.213-1.756 0.553 0.026 0.932 0.78 1.251 0.321 0.319-0.459 0.401-2.59 0.139-2.94-0.262-0.35-0.757-0.403-1.308 0.003v0 0z" fill="#CCCCCC"></path>
+    </svg>
+</div>
+<footer id="m-footer">
+    <div class="Copyright">
+        <p>© 2017 <a href="#">Amo_lnk博客</a>.
+        All Rights Reserved. 版权所有.        </p>
+    </div>
+</footer>
+<script src="./get_files/jquery2.14.min.js"></script>
+<script src="./get_files/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="./get_files/functionall.js"></script>
+<script src="./get_files/tagcanvas.min.js"></script>
+<script src="./get_files/particles.min.js"></script>
+<script src="./get_files/headerCanvas.js"></script>
+<script src="./get_files/home.js"></script>
+
+</body></html>
